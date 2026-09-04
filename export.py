@@ -170,6 +170,7 @@ def export_page(design: str, language: str, source_slug: str, output_slug: str, 
 
     for host in INTERNAL_HOSTS:
         html = html.replace(f"http://{host}", "").replace(f"https://{host}", "")
+    html = html.replace("info@dentiste-local.local", "info@cdfmain.com")
 
     notice = (
         '<div class="static-preview-notice" role="status">'
