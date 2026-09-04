@@ -1,0 +1,14 @@
+* {
+  --primary-color: #0097B1;
+  --primary-color-rgb: 0, 151, 177;
+  --secondary-color: #306751;
+  --secondary-color-rgb: 48, 103, 81;
+  --tertiary-color: #095A73;
+  --tertiary-color-rgb: 9, 90, 115;
+  --brand-dark: #014337;
+  --brand-dark-rgb: 1, 67, 55;
+  --bg-dark-1: #014337;
+  --bg-dark-1-rgb: 1, 67, 55;
+  --bg-dark-2: #095A73;
+  --bg-dark-3: #0a3f4d;
+}
