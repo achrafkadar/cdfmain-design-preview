@@ -26,7 +26,6 @@
 	<!-- / Yoast SEO plugin. -->
 
 
-<link rel='dns-prefetch' href='/a/' />
 <style id="wp-img-auto-sizes-contain-inline-css">
 img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 /*# sourceURL=wp-img-auto-sizes-contain-inline-css */
@@ -236,7 +235,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <p><span class="wpcf7-form-control-wrap textarea-337"><textarea name="textarea-337" cols="40" rows="10" class="wpcf7-form-control wpcf7-textarea" aria-invalid="false"></textarea></span>
 </p></div>
 <p><div class="anr_captcha_field"><div id="anr_captcha_field_1" class="anr_captcha_field_div"></div></div><span class="wpcf7-form-control-wrap g-recaptcha-response"><span class="wpcf7-form-control"></span></span></p>
-<p><span id="wpcf7-6a9af059246ce-wrapper" class="wpcf7-form-control-wrap pumpkin-pie-wrap" style="display:none !important; visibility:hidden !important;"><label for="wpcf7-6a9af059246ce-field" class="hp-message">Veuillez laisser ce champ vide.</label><input id="wpcf7-6a9af059246ce-field"  class="wpcf7-form-control wpcf7-text" type="text" name="pumpkin-pie" value="" size="40" tabindex="-1" autocomplete="new-password" /></span></p>
+<p><span id="wpcf7-6a9c2c60a78d3-wrapper" class="wpcf7-form-control-wrap pumpkin-pie-wrap" style="display:none !important; visibility:hidden !important;"><label for="wpcf7-6a9c2c60a78d3-field" class="hp-message">Veuillez laisser ce champ vide.</label><input id="wpcf7-6a9c2c60a78d3-field"  class="wpcf7-form-control wpcf7-text" type="text" name="pumpkin-pie" value="" size="40" tabindex="-1" autocomplete="new-password" /></span></p>
 <p class="u-align-center"><input type="submit" value="Soumettre" class="wpcf7-form-control has-spinner wpcf7-submit" /></p>
 </div>
 </form></div>						</div>
@@ -383,10 +382,14 @@ var e="script#wp-emoji-settings",t=document.querySelector(e);if(!(t instanceof H
 			#cdfm-design-switcher {
 				left: 50% !important;
 				bottom: 8px !important;
+				width: auto !important;
+				max-width: none !important;
 				padding: 6px !important;
 				gap: 4px !important;
+				flex-wrap: nowrap !important;
 				transform: translateX(-50%);
 				border-radius: 999px !important;
+				white-space: nowrap;
 			}
 			#cdfm-design-switcher .cdfm-switcher-label {
 				display: none;

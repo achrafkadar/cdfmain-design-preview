@@ -22,7 +22,6 @@
 	<!-- / Yoast SEO plugin. -->
 
 
-<link rel='dns-prefetch' href='/a/en/' />
 <style id="wp-img-auto-sizes-contain-inline-css">
 img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 /*# sourceURL=wp-img-auto-sizes-contain-inline-css */
@@ -213,7 +212,7 @@ will always be at its best</h1>
 </section>
 
 <!-- Info bar -->
-<section class="bg-dark text-light pt-50 pb-30">
+<section class="home-info-strip bg-dark text-light pt-50 pb-30">
 	<div class="container relative">
 		<div class="row g-4 grid-divider">
 			<div class="col-lg-4 col-md-6 mb-sm-30">
@@ -844,10 +843,14 @@ var e="script#wp-emoji-settings",t=document.querySelector(e);if(!(t instanceof H
 			#cdfm-design-switcher {
 				left: 50% !important;
 				bottom: 8px !important;
+				width: auto !important;
+				max-width: none !important;
 				padding: 6px !important;
 				gap: 4px !important;
+				flex-wrap: nowrap !important;
 				transform: translateX(-50%);
 				border-radius: 999px !important;
+				white-space: nowrap;
 			}
 			#cdfm-design-switcher .cdfm-switcher-label {
 				display: none;

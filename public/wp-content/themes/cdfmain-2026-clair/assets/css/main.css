@@ -1916,3 +1916,397 @@ body.clair-body {
 		font-size: .61rem;
 	}
 }
+
+/* ── Responsive refinement: centered brand, shorter pages, clearer rhythm ── */
+@media (max-width: 991px) {
+	.clair-header__inner {
+		position: relative;
+		width: 100%;
+		min-height: 66px;
+		padding: 0 16px;
+		justify-content: flex-end;
+	}
+
+	.clair-brand {
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		z-index: 31;
+		transform: translate(-50%, -50%);
+	}
+
+	.clair-brand img {
+		width: auto;
+		height: auto;
+		max-width: 106px;
+		max-height: 38px;
+	}
+
+	.clair-nav-toggle {
+		width: 40px;
+		height: 40px;
+		border-radius: 12px;
+	}
+
+	.clair-nav-toggle[aria-expanded="true"] .clair-nav-toggle__bars {
+		background: transparent;
+	}
+
+	.clair-nav-toggle[aria-expanded="true"] .clair-nav-toggle__bars::before {
+		top: 0;
+		transform: rotate(45deg);
+	}
+
+	.clair-nav-toggle[aria-expanded="true"] .clair-nav-toggle__bars::after {
+		top: 0;
+		transform: rotate(-45deg);
+	}
+
+	.clair-nav {
+		left: 50%;
+		right: auto;
+		top: 100%;
+		width: 100vw;
+		max-height: calc(100svh - 66px);
+		padding: 16px 20px 24px;
+		transform: translateX(-50%);
+	}
+
+	.clair-nav__list a {
+		padding: 11px 0;
+		font-size: .94rem;
+	}
+
+	.clair-nav__actions {
+		gap: 12px;
+	}
+
+	.clair-nav__actions .clair-btn {
+		min-height: 46px;
+	}
+
+	.clair-hero {
+		min-height: 780px;
+		align-items: flex-end;
+	}
+
+	.clair-hero__media {
+		inset: 0 0 48% 0;
+		border-radius: 0;
+		background-position: center 42%;
+	}
+
+	.clair-hero__veil {
+		background:
+			linear-gradient(
+				180deg,
+				rgba(1, 67, 55, .04) 0%,
+				rgba(1, 67, 55, .16) 34%,
+				rgba(1, 67, 55, .96) 51%,
+				#014337 70%
+			);
+	}
+
+	.clair-hero__content {
+		width: 100%;
+		max-width: none;
+		padding: 345px 20px 42px;
+	}
+
+	.clair-hero__content h1 {
+		max-width: 11ch;
+		font-size: clamp(3rem, 10vw, 4.6rem);
+		line-height: .96;
+	}
+
+	.clair-hero__text {
+		max-width: 34rem;
+		font-size: 1rem;
+		line-height: 1.65;
+	}
+
+	.clair-hero__proof {
+		margin-top: 2rem;
+	}
+
+	.clair-strip {
+		width: 100%;
+		margin: 0;
+		border-radius: 0;
+		box-shadow: none;
+	}
+
+	.clair-strip__row {
+		padding: 14px 20px;
+	}
+
+	.clair-section {
+		padding: 68px 0;
+	}
+
+	.clair-section__head {
+		margin-bottom: 2.5rem;
+	}
+
+	.clair-split {
+		gap: 3.5rem;
+	}
+
+	.clair-split__media,
+	.clair-split--reverse .clair-split__media {
+		width: min(100% - 16px, 520px);
+		max-height: 430px;
+		margin: 0 auto;
+		border-radius: 70px 70px 18px 18px;
+		box-shadow: 14px 14px 0 var(--clair-soft);
+	}
+
+	.clair-services {
+		gap: 12px;
+	}
+
+	.clair-service,
+	.clair-service:nth-child(odd) {
+		min-height: 210px;
+		padding: 1.35rem;
+	}
+
+	.clair-service__index {
+		margin-bottom: 2rem;
+	}
+
+	.clair-team-card {
+		min-height: 380px;
+	}
+
+	.clair-faq-layout {
+		gap: 2rem;
+	}
+
+	.clair-page {
+		padding: 56px 0 68px;
+	}
+
+	.clair-contact-grid,
+	.clair-appointment-grid {
+		gap: 20px;
+	}
+
+	.clair-subheader {
+		min-height: 390px;
+	}
+
+	.clair-subheader__content {
+		padding: 4rem 0 2.5rem;
+	}
+
+	.clair-footer__grid {
+		gap: 2.25rem;
+	}
+}
+
+@media (max-width: 600px) {
+	.clair-wrap {
+		width: calc(100% - 32px);
+	}
+
+	h1 {
+		font-size: clamp(2.7rem, 13vw, 3.5rem);
+	}
+
+	h2 {
+		font-size: clamp(2.15rem, 10vw, 2.85rem);
+	}
+
+	.clair-hero {
+		min-height: 740px;
+	}
+
+	.clair-hero__media {
+		bottom: 50%;
+		background-position: center 40%;
+	}
+
+	.clair-hero__content {
+		padding: 320px 16px 34px;
+	}
+
+	.clair-hero__content h1 {
+		margin-bottom: 1rem;
+		font-size: clamp(2.9rem, 13.5vw, 3.55rem);
+		line-height: .94;
+	}
+
+	.clair-kicker {
+		gap: .55rem;
+		font-size: .68rem;
+		line-height: 1.5;
+	}
+
+	.clair-kicker::before {
+		width: 24px;
+		flex: 0 0 24px;
+	}
+
+	.clair-hero__actions {
+		gap: .75rem;
+		margin-top: 1.4rem;
+	}
+
+	.clair-hero .clair-btn {
+		min-height: 46px;
+		padding: .78rem 1.1rem;
+		font-size: .68rem;
+	}
+
+	.clair-hero .clair-btn--ghost {
+		margin-left: 0;
+	}
+
+	.clair-strip__row {
+		grid-template-columns: 1fr 1fr;
+		padding: 12px 16px;
+	}
+
+	.clair-strip__row p {
+		min-width: 0;
+		padding: 12px;
+		border-right: 0;
+		border-bottom: 1px solid var(--clair-line);
+	}
+
+	.clair-strip__row p:nth-child(odd) {
+		border-right: 1px solid var(--clair-line);
+	}
+
+	.clair-strip__row p:nth-last-child(-n+2) {
+		border-bottom: 0;
+	}
+
+	.clair-section {
+		padding: 56px 0;
+	}
+
+	.clair-section__head {
+		margin-bottom: 2rem;
+	}
+
+	.clair-split {
+		gap: 2.75rem;
+	}
+
+	.clair-split__media,
+	.clair-split--reverse .clair-split__media {
+		aspect-ratio: 4 / 3;
+		max-height: 330px;
+		border-radius: 50px 50px 16px 16px;
+		box-shadow: 10px 10px 0 var(--clair-soft);
+	}
+
+	.clair-split__text > p:not(.clair-kicker) {
+		font-size: 1rem;
+		line-height: 1.7;
+	}
+
+	.clair-checklist {
+		gap: .3rem;
+	}
+
+	.clair-checklist li {
+		padding: .8rem 0 .8rem 1.35rem;
+		font-size: .92rem;
+	}
+
+	.clair-checklist li::before {
+		top: 1.3rem;
+	}
+
+	.clair-service,
+	.clair-service:nth-child(odd) {
+		min-height: 175px;
+	}
+
+	.clair-service__index {
+		margin-bottom: 1.35rem;
+	}
+
+	.clair-metrics {
+		padding: 26px 0;
+	}
+
+	.clair-metric {
+		min-height: 104px;
+	}
+
+	.clair-metric strong {
+		font-size: 2.35rem;
+	}
+
+	.clair-team-card {
+		min-height: 330px;
+		border-radius: 80px 80px 16px 16px;
+	}
+
+	.cdfm-faq__question {
+		padding: 1.1rem 0;
+		font-size: 1.16rem;
+	}
+
+	.clair-cta {
+		padding: 60px 0;
+	}
+
+	.clair-subheader {
+		min-height: 330px;
+	}
+
+	.clair-subheader__content {
+		padding: 3rem 0 2rem;
+	}
+
+	.clair-subheader__content h1 {
+		font-size: clamp(2.65rem, 13vw, 3.4rem);
+	}
+
+	.clair-contact-panel,
+	.clair-form-panel {
+		padding: 24px 20px;
+		border-radius: 18px;
+		overflow-wrap: normal;
+		word-break: normal;
+		-webkit-hyphens: none;
+		hyphens: none;
+	}
+
+	.clair-map iframe {
+		min-height: 280px;
+	}
+
+	.clair-hours-card {
+		min-height: 340px;
+	}
+
+	.clair-fact {
+		padding: 1.25rem;
+	}
+
+	.clair-fact > span {
+		margin-bottom: 1.4rem;
+	}
+
+	.clair-footer {
+		padding-top: 3.5rem;
+		text-align: center;
+	}
+
+	.clair-footer__brand img {
+		max-width: 122px;
+		height: auto;
+		margin-right: auto;
+		margin-left: auto;
+	}
+
+	.clair-footer__base {
+		align-items: center;
+	}
+}
