@@ -1356,3 +1356,281 @@ img, video, iframe, svg {
 		justify-content: center !important;
 	}
 }
+
+/* ── Client brief 1.8.0 ── */
+.brand-logo a {
+	display: flex !important;
+	flex-direction: column;
+	align-items: flex-start;
+	gap: 2px;
+	line-height: 1.05 !important;
+}
+.brand-logo__name {
+	display: block;
+	font-size: 11px;
+	font-weight: 700;
+	letter-spacing: .12em;
+	text-transform: uppercase;
+	color: #0097B1;
+	line-height: 1.1;
+	white-space: nowrap;
+}
+.brand-logo__name--footer {
+	margin: 8px 0 14px;
+	color: #7fd0df;
+}
+#logo.logo-minimal img,
+header #logo.logo-minimal .logo-main,
+header #logo.logo-minimal .logo-2 {
+	max-height: 68px !important;
+	max-width: 240px !important;
+}
+#mainmenu > li > a.menu-item {
+	font-size: 15px !important;
+	font-weight: 600;
+	letter-spacing: .01em;
+	padding-left: 12px !important;
+	padding-right: 12px !important;
+}
+.header-social {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+}
+.header-social a {
+	width: 34px;
+	height: 34px;
+	border-radius: 50%;
+	border: 1.5px solid rgba(0, 151, 177, .85);
+	color: #0097B1 !important;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 15px;
+	transition: .2s ease;
+	background: rgba(255,255,255,.08);
+}
+.header-social a:hover {
+	background: #0097B1;
+	color: #fff !important;
+	border-color: #0097B1;
+}
+.header-social--footer a {
+	border-color: rgba(255,255,255,.45);
+	color: #fff !important;
+}
+.header-phone {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	padding: 8px 14px;
+	border: 1px solid rgba(255,255,255,.7);
+	color: #fff !important;
+	font-weight: 700;
+	font-size: 14px;
+	letter-spacing: .02em;
+	white-space: nowrap;
+	background: rgba(1,67,55,.25);
+}
+header.smaller .header-phone {
+	border-color: #014337;
+	color: #014337 !important;
+	background: #fff;
+}
+.hero-actions {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 14px;
+	margin-top: 8px;
+}
+.hero-phone {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	padding: 12px 18px;
+	border: 1px solid #fff;
+	color: #fff !important;
+	font-weight: 700;
+	font-size: 18px;
+	letter-spacing: .02em;
+	background: rgba(1,67,55,.28);
+}
+.hero-new-patients {
+	display: inline-flex;
+	align-items: center;
+	gap: 10px;
+	margin-top: 18px;
+	padding: 12px 18px;
+	border-radius: 999px;
+	background: #0097B1;
+	color: #fff !important;
+	font-size: 18px;
+	font-weight: 700;
+	line-height: 1.2;
+	box-shadow: 0 10px 30px rgba(0,151,177,.35);
+}
+.hero-new-patients i {
+	font-size: 28px;
+}
+.service-mini-list {
+	list-style: none;
+	padding: 0;
+	margin: 0 0 16px;
+	font-size: 13px;
+	color: #55615c;
+}
+.service-mini-list li {
+	position: relative;
+	padding-left: 14px;
+	margin-bottom: 4px;
+}
+.service-mini-list li:before {
+	content: "•";
+	position: absolute;
+	left: 0;
+	color: #0097B1;
+}
+.cdfm-soon {
+	display: inline-block;
+	padding: 10px 14px;
+	border-radius: 8px;
+	background: rgba(0,151,177,.08);
+	border: 1px dashed rgba(0,151,177,.35);
+}
+.cdfm-soon__label {
+	margin: 0 0 4px;
+	font-weight: 700;
+	color: #014337;
+}
+.cdfm-soon__text {
+	margin: 0;
+	font-weight: 600;
+	color: #095A73;
+	letter-spacing: .04em;
+	text-transform: uppercase;
+	font-size: 13px;
+}
+.team-placeholder {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 360px;
+	border-radius: 8px;
+	background: linear-gradient(145deg, #014337, #095A73);
+	color: #fff;
+	font-size: 64px;
+	font-weight: 700;
+}
+.team-placeholder--sm {
+	min-height: 160px;
+	font-size: 36px;
+}
+.footer-banner {
+	background: #0097B1;
+	color: #fff;
+	text-align: center;
+	padding: 28px 16px;
+}
+.footer-banner p {
+	margin: 0;
+	font-size: 22px;
+	font-weight: 700;
+	letter-spacing: .01em;
+}
+.footer-map {
+	padding: 0 !important;
+}
+.footer-map__grid {
+	display: grid;
+	grid-template-columns: 1.15fr .85fr;
+	min-height: 420px;
+}
+.footer-map__info {
+	padding: 56px 0 40px;
+}
+.footer-map__canvas iframe {
+	display: block;
+	min-height: 420px;
+	height: 100%;
+	width: 100%;
+	filter: grayscale(.15) contrast(1.05);
+}
+.footer-parking {
+	font-weight: 600;
+	color: #7fd0df;
+}
+.appointment-hours-card--top {
+	top: 24px;
+	bottom: auto;
+}
+.cdfm-appt-form__grid {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 0 14px;
+}
+.cdfm-appt-form label {
+	display: block;
+	font-size: 13px;
+	font-weight: 600;
+	color: #3a4540;
+	margin-bottom: 12px;
+}
+.cdfm-appt-form input,
+.cdfm-appt-form select,
+.cdfm-appt-form textarea {
+	width: 100%;
+	margin-top: 6px;
+	padding: 10px 14px;
+	border: 1px solid #dde3df;
+	border-radius: 6px;
+	background: #fafafa;
+}
+.cdfm-radio {
+	display: inline-flex !important;
+	align-items: center;
+	gap: 6px;
+	margin-right: 16px;
+	font-weight: 600;
+}
+.cdfm-appt-form .req {
+	color: #c0392b;
+}
+.cdfm-appt-form__hint {
+	font-size: 13px;
+	color: #5c655f;
+}
+
+@media (max-width: 1199px) {
+	.header-phone { display: none; }
+	#mainmenu > li > a.menu-item {
+		font-size: 13px !important;
+		padding-left: 8px !important;
+		padding-right: 8px !important;
+	}
+}
+@media (max-width: 992px) {
+	.footer-map__grid {
+		grid-template-columns: 1fr;
+	}
+	.footer-map__canvas iframe {
+		min-height: 280px;
+	}
+	.cdfm-appt-form__grid {
+		grid-template-columns: 1fr;
+	}
+	.header-social { display: none; }
+	header.header-mobile #logo.logo-minimal img {
+		max-width: 140px !important;
+		max-height: 48px !important;
+	}
+	.brand-logo__name {
+		font-size: 9px;
+	}
+	.hero-new-patients {
+		font-size: 16px;
+	}
+	.footer-banner p {
+		font-size: 17px;
+	}
+}
