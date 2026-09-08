@@ -23,10 +23,7 @@ PAGES = {
         "": "",
         "services": "services",
         "la-clinique": "la-clinique",
-        "notre-equipe": "notre-equipe",
-        "urgence-dentaire": "urgence-dentaire",
         "informations": "informations",
-        "carrieres": "carrieres",
         "nous-joindre": "nous-joindre",
         "prendre-rendez-vous": "prendre-rendez-vous",
     },
@@ -142,16 +139,7 @@ def export_page(design: str, language: str, source_slug: str, output_slug: str, 
     if language == "en":
         query["lang"] = "en"
     source = f"/{source_slug + '/' if source_slug else ''}?{urllib.parse.urlencode(query)}"
-    try:
-        html = local_request(source).decode("utf-8", errors="replace")
-    except urllib.error.HTTPError as exc:
-        if language == "en" and exc.code == 404:
-            # Fall back to French markup when WPML translation is missing.
-            query = {"design": design}
-            source = f"/{source_slug + '/' if source_slug else ''}?{urllib.parse.urlencode(query)}"
-            html = local_request(source).decode("utf-8", errors="replace")
-        else:
-            raise
+    html = local_request(source).decode("utf-8", errors="replace")
 
     discovered = re.findall(
         r"""(?:src|href|poster)=["']([^"']+)["']|url\(["']?([^"')]+)""",
@@ -209,17 +197,8 @@ def export_page(design: str, language: str, source_slug: str, output_slug: str, 
 def main() -> None:
     """Build all French and English static preview pages."""
     if PUBLIC_DIR.exists():
-        shutil.rmtree(PUBLIC_DIR, ignore_errors=True)
-        if PUBLIC_DIR.exists():
-            for child in PUBLIC_DIR.iterdir():
-                if child.is_dir():
-                    shutil.rmtree(child, ignore_errors=True)
-                else:
-                    try:
-                        child.unlink()
-                    except OSError:
-                        pass
-    PUBLIC_DIR.mkdir(parents=True, exist_ok=True)
+        shutil.rmtree(PUBLIC_DIR)
+    PUBLIC_DIR.mkdir(parents=True)
 
     assets: set[str] = set()
     for design in ("a", "b"):

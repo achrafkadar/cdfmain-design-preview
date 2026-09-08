@@ -100,13 +100,12 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 				<div class="col-md-12">
 					<div class="de-flex sm-pt10">
 						<div class="de-flex-col">
-							<div id="logo" class="logo-minimal brand-logo">
+							<div id="logo" class="logo-minimal">
 								<a href="/a/en/" aria-label="Clinique Dentaire Familiale Main">
-									<img class="logo-main logo" src="/wp-content/themes/cdfmain-2026/assets/images/site/logo-dark.png" alt="Clinique Dentaire Familiale Main" width="220" height="72" decoding="async">
-									<img class="logo-scroll logo-2" src="/wp-content/themes/cdfmain-2026/assets/images/site/logo-dark.png" alt="Clinique Dentaire Familiale Main" width="220" height="72" decoding="async">
-									<img class="logo-mobile logo-mobile-light" src="/wp-content/themes/cdfmain-2026/assets/images/site/logo-dark.png" alt="Clinique Dentaire Familiale Main" width="180" height="58" decoding="async">
-									<img class="logo-mobile logo-mobile-dark" src="/wp-content/themes/cdfmain-2026/assets/images/site/logo-dark.png" alt="Clinique Dentaire Familiale Main" width="180" height="58" decoding="async">
-									<span class="brand-logo__name">Familiale Main</span>
+									<img class="logo-main logo" src="/wp-content/themes/cdfmain-2026/assets/images/site/logo-white.png" alt="Clinique Dentaire Familiale Main" width="150" height="44" decoding="async">
+									<img class="logo-scroll logo-2" src="/wp-content/themes/cdfmain-2026/assets/images/site/logo-dark.png" alt="Clinique Dentaire Familiale Main" width="150" height="44" decoding="async">
+									<img class="logo-mobile logo-mobile-light" src="/wp-content/themes/cdfmain-2026/assets/images/site/logo-white.png" alt="Clinique Dentaire Familiale Main" width="130" height="38" decoding="async">
+									<img class="logo-mobile logo-mobile-dark" src="/wp-content/themes/cdfmain-2026/assets/images/site/logo-dark.png" alt="Clinique Dentaire Familiale Main" width="130" height="38" decoding="async">
 								</a>
 							</div>
 						</div>
@@ -114,23 +113,28 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 						<div class="de-flex-col header-col-mid">
 							<ul id="mainmenu">
 																	<li>
-										<a class="menu-item" href="/a/en/the-clinic/">The clinic</a>
-									</li>
+										<a class="menu-item" href="/a/en/">Home</a>
+																			</li>
 																	<li>
 										<a class="menu-item" href="/a/en/services/">Services</a>
-									</li>
+																					<ul>
+																									<li><a href="/a/en/services/#blanchiment">Teeth whitening</a></li>
+																									<li><a href="/a/en/services/#couronnes">Crowns &amp; bridges</a></li>
+																									<li><a href="/a/en/services/#facette">Veneers</a></li>
+																									<li><a href="/a/en/services/#endodontie">Endodontics</a></li>
+																									<li><a href="/a/en/services/#radiographie-scan-3D">3D imaging</a></li>
+																									<li><a href="/a/en/services/">All services</a></li>
+																							</ul>
+																			</li>
 																	<li>
-										<a class="menu-item" href="/dental-emergency/?lang=en">Dental emergency</a>
-									</li>
+										<a class="menu-item" href="/a/en/the-clinic/">The Clinic</a>
+																			</li>
 																	<li>
-										<a class="menu-item" href="/a/en/informations/">Patient info</a>
-									</li>
-																	<li>
-										<a class="menu-item" href="/careers/?lang=en">Careers</a>
-									</li>
+										<a class="menu-item" href="/a/en/informations/">Information</a>
+																			</li>
 																	<li>
 										<a class="menu-item" href="/a/en/contact/">Contact</a>
-									</li>
+																			</li>
 															</ul>
 						</div>
 
@@ -146,12 +150,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 												href="/a/en/take-appointment/"
 												aria-current="true"											>EN</a>
 																			</div>
-																<div class="header-social" aria-label="Follow us">
-									<a href="https://www.facebook.com/cdf.main/" target="_blank" rel="noopener" aria-label="Facebook"><i class="icofont-facebook"></i></a>
-									<a href="https://www.instagram.com/explore/search/keyword/?q=Clinique%20Dentaire%20Familiale%20Main" target="_blank" rel="noopener" aria-label="Instagram"><i class="icofont-instagram"></i></a>
-								</div>
-								<a href="tel:18196633687" class="header-phone">819 663-3687</a>
-								<a href="/a/en/take-appointment/" class="btn-main fx-slide"><span>Book appointment</span></a>
+																<a href="/a/en/take-appointment/" class="btn-main fx-slide"><span>Book appointment</span></a>
 								<span id="menu-btn"></span>
 							</div>
 						</div>
@@ -189,84 +188,74 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 						<h3 class="mb-2">
 							<i class="icofont-calendar id-color me-2" aria-hidden="true"></i>
 							Request an appointment						</h3>
-						<p class="appointment-form-lead mb-4">Fill out the form and our team will contact you as soon as possible.</p>
+
+													<p class="appointment-form-lead mb-4">This form is available for you to make an appointment with one of our professionals.</p>
+						
 						<div class="appointment-form-wrap">
-								<form class="cdfm-appt-form" action="#" method="post">
-		<p class="cdfm-appt-form__row">
-			<span>Are you already a patient of the clinic? <span class="req">*</span></span>
-			<label class="cdfm-radio"><input type="radio" name="already_patient" value="oui" required> Yes</label>
-			<label class="cdfm-radio"><input type="radio" name="already_patient" value="non"> No</label>
-		</p>
-		<div class="cdfm-appt-form__grid">
-			<p>
-				<label>First name <span class="req">*</span>
-					<input type="text" name="first_name" required>
-				</label>
-			</p>
-			<p>
-				<label>Last name <span class="req">*</span>
-					<input type="text" name="last_name" required>
-				</label>
-			</p>
-			<p>
-				<label>Phone <span class="req">*</span>
-					<input type="tel" name="phone" required>
-				</label>
-			</p>
-			<p>
-				<label>Email					<input type="email" name="email">
-				</label>
-			</p>
-			<p>
-				<label>Preferred appointment date <span class="req">*</span>
-					<input type="date" name="preferred_date" required>
-				</label>
-			</p>
-			<p>
-				<label>Reason for visit <span class="req">*</span>
-					<select name="visit_type" required>
-						<option value="">Select</option>
-													<option value="Dental emergency">Dental emergency</option>
-													<option value="Complete dental exam">Complete dental exam</option>
-													<option value="Specific exam">Specific exam</option>
-													<option value="Exam / cleaning">Exam / cleaning</option>
-													<option value="Orthodontic consultation">Orthodontic consultation</option>
-													<option value="Cosmetic consultation">Cosmetic consultation</option>
-													<option value="Tooth extraction">Tooth extraction</option>
-													<option value="Other">Other</option>
-											</select>
-				</label>
-			</p>
-		</div>
-		<p>
-			<label>Message				<textarea name="message" rows="4"></textarea>
-			</label>
-		</p>
-		<p>
-			<button class="btn-main fx-slide" type="submit"><span>Send request</span></button>
-		</p>
-		<p class="cdfm-appt-form__hint">
-			Prefer to call?			<a href="tel:18196633687">819 663-3687</a>
-		</p>
-	</form>
-							</div>
+							<div role="form" class="wpcf7" id="wpcf7-f251-p149-o1" lang="fr-FR" dir="ltr">
+<div class="screen-reader-response"><p role="status" aria-live="polite" aria-atomic="true"></p> <ul></ul></div>
+<form action="/take-appointment/?design=a&#038;lang=en#wpcf7-f251-p149-o1" method="post" class="wpcf7-form init c-quote-form" novalidate="novalidate" data-status="init">
+<div style="display: none;">
+<input type="hidden" name="_wpcf7" value="251" />
+<input type="hidden" name="_wpcf7_version" value="5.5.3" />
+<input type="hidden" name="_wpcf7_locale" value="fr_FR" />
+<input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f251-p149-o1" />
+<input type="hidden" name="_wpcf7_container_post" value="149" />
+<input type="hidden" name="_wpcf7_posted_data_hash" value="" />
+</div>
+<div class="wpcf7-response-output" aria-hidden="true"></div>
+<div class="l-quote-container__section">
+<div class="l-quote-container__col">
+<p>First name*<br />
+    <span class="wpcf7-form-control-wrap your-first-name"><input type="text" name="your-first-name" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" /></span> </p>
+<p>Last name*<br />
+    <span class="wpcf7-form-control-wrap your-last-name"><input type="text" name="your-last-name" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" /></span> </p>
+<p>E-mail*<br />
+    <span class="wpcf7-form-control-wrap your-email"><input type="email" name="your-email" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email" aria-required="true" aria-invalid="false" /></span> </p>
+<p>City<br />
+    <span class="wpcf7-form-control-wrap your-city"><input type="text" name="your-city" value="" size="40" class="wpcf7-form-control wpcf7-text" aria-invalid="false" /></span> </p>
+<p>Phone<br />
+   <span class="wpcf7-form-control-wrap your-phone"><input type="text" name="your-phone" value="" size="40" class="wpcf7-form-control wpcf7-text" aria-invalid="false" /></span> </p>
+<p>Appointment date?<br />
+    <span class="wpcf7-form-control-wrap date-655"><input type="date" name="date-655" value="" class="wpcf7-form-control wpcf7-date wpcf7-validates-as-date" aria-invalid="false" placeholder="Choose a date" /></span> </p>
+</div>
+<div class="c-quote-form__section c-quote-form__section--sondage">
+<h3 class="c-quote-form__section-title">Make a choice</h3>
+<p>Tell us how we can help you</p>
+<p class="c-quote-form--u-align-center"><span class="wpcf7-form-control-wrap menu-638"><select name="menu-638" class="wpcf7-form-control wpcf7-select" aria-invalid="false"><option value="Please select your choice">Please select your choice</option><option value="Complete dental examination">Complete dental examination</option><option value="Specific examination">Specific examination</option><option value="Dental implant consultation">Dental implant consultation</option><option value="Aesthetic consultation">Aesthetic consultation</option><option value="Denturist">Denturist</option></select></span></p>
+</div>
+<div class="c-quote-form__section c-quote-form__section--sondage">
+<h3 class="c-quote-form__section-title">Survey</h3>
+<p>How did you hear about the Main family dental clinic?</p>
+<p class="c-quote-form--u-align-center"><span class="wpcf7-form-control-wrap menu-639"><select name="menu-639" class="wpcf7-form-control wpcf7-select" aria-invalid="false"><option value="Please select your choice">Please select your choice</option><option value="Word of mouth">Word of mouth</option><option value="Website">Website</option><option value="Local advertising">Local advertising</option><option value="Social media">Social media</option><option value="Other">Other</option></select></span></p>
+</div>
+<div class="c-quote-form__section">
+<h3 class="c-quote-form__section-title">Message</h3>
+<p><span class="wpcf7-form-control-wrap textarea-337"><textarea name="textarea-337" cols="40" rows="10" class="wpcf7-form-control wpcf7-textarea" aria-invalid="false"></textarea></span>
+</p></div>
+<p><div class="anr_captcha_field"><div id="anr_captcha_field_1" class="anr_captcha_field_div"></div></div><span class="wpcf7-form-control-wrap g-recaptcha-response"><span class="wpcf7-form-control"></span></span></p>
+<p><span id="wpcf7-6a9c2c61098ca-wrapper" class="wpcf7-form-control-wrap pumpkin-pie-wrap" style="display:none !important; visibility:hidden !important;"><label for="wpcf7-6a9c2c61098ca-field" class="hp-message">Please leave this field empty.</label><input id="wpcf7-6a9c2c61098ca-field"  class="wpcf7-form-control wpcf7-text" type="text" name="pumpkin-pie" value="" size="40" tabindex="-1" autocomplete="new-password" /></span></p>
+<p class="u-align-center"><input type="submit" value="Send" class="wpcf7-form-control has-spinner wpcf7-submit" /></p>
+</div>
+</form></div>						</div>
 					</div>
 				</div>
 
 				<div class="col-lg-6 d-flex wow fadeInUp" data-wow-delay=".15s">
-					<div class="appointment-visual w-100 rounded-1 overflow-hidden" style="background-image: url(/wp-content/themes/cdfmain-2026/assets/images/site/hero/hero-care.jpg);">
-						<div class="appointment-hours-card appointment-hours-card--top text-light">
-							<div class="d-flex align-items-start">
-								<i class="icofont-clock-time fs-48 text-white me-3" aria-hidden="true"></i>
+					<div
+						class="appointment-visual w-100 rounded-1 overflow-hidden"
+						style="background-image: url(/wp-content/themes/cdfmain-2026/assets/images/site/hero/hero-care.jpg);">
+						<div class="appointment-hours-card text-light">
+							<div class="d-flex align-items-center">
+								<i class="icofont-clock-time fs-60 text-white me-3" aria-hidden="true"></i>
 								<div>
-									<h4 class="mb-2">Opening hours</h4>
-									<p class="mb-3">Monday to Thursday: 8:30 a.m. – 4:00 p.m.<br>Friday: 8:30 a.m. – 2:00 p.m.</p>
-									<p class="mb-1 small opacity-85"><i class="icofont-location-pin me-1"></i>395, rue Main, 2e étage, Gatineau, QC J8P 5K6</p>
-									<p class="mb-0 small opacity-85">Free parking available</p>
+									<h4 class="mb-1">Opening hours</h4>
+									<p class="mb-0">Mon – Fri · 8am – 4pm</p>
 								</div>
 							</div>
 							<hr class="my-3 opacity-25">
-							<a class="btn-main btn-line fx-slide" href="tel:18196633687"><span>819 663-3687</span></a>
+							<p class="mb-2 small opacity-85">Prefer to call? Our team is happy to help.</p>
+							<a class="btn-main btn-line fx-slide" href="tel:18196633687"><span>(819) 663-3687</span></a>
 						</div>
 					</div>
 				</div>
@@ -277,72 +266,83 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 		</div><!-- #content -->
 
 	
-	<section class="footer-banner">
+	<footer class="section-dark">
 		<div class="container">
-			<p>Let’s take care of your smile together, at every age</p>
-		</div>
-	</section>
+			<div class="row gx-5">
+				<div class="col-lg-4 col-sm-6">
+					<img src="/wp-content/themes/cdfmain-2026/assets/images/site/logo-white.png" class="logo-footer" alt="Clinique Dentaire Familiale Main">
+					<div class="spacer-20"></div>
+					<p>Gentle, modern and bilingual dental care for the whole family in Gatineau — from prevention to advanced treatments, with comfort and trust first.</p>
 
-	<footer class="section-dark footer-map">
-		<div class="footer-map__grid">
-			<div class="footer-map__info">
-				<div class="container">
-					<div class="row gx-5 gy-4">
-						<div class="col-lg-4">
-							<img src="/wp-content/themes/cdfmain-2026/assets/images/site/logo-dark.png" class="logo-footer" alt="Clinique Dentaire Familiale Main">
-							<p class="brand-logo__name brand-logo__name--footer">Familiale Main</p>
-							<p>Family dental care in the heart of Gatineau — prevention, emergencies, and personalized treatments for every age.</p>
-							<p class="footer-parking"><i class="icofont-car-alt-1 me-2"></i>Free parking available</p>
-							<div class="header-social header-social--footer">
-								<a href="https://www.facebook.com/cdf.main/" target="_blank" rel="noopener" aria-label="Facebook"><i class="icofont-facebook"></i></a>
-								<a href="https://www.instagram.com/explore/search/keyword/?q=Clinique%20Dentaire%20Familiale%20Main" target="_blank" rel="noopener" aria-label="Instagram"><i class="icofont-instagram"></i></a>
-							</div>
-						</div>
-						<div class="col-lg-3">
+					<div class="social-icons mb-sm-30">
+						<a href="https://www.google.ca/maps/place/395+Rue+Main,+Gatineau,+QC+J8P+5K6" target="_blank" rel="noopener"><i class="icofont-location-pin"></i></a>
+						<a href="tel:18196633687"><i class="icofont-phone"></i></a>
+						<a href="mailto:info@cdfmain.com"><i class="icofont-envelope"></i></a>
+					</div>
+				</div>
+
+				<div class="col-lg-4 col-sm-12 order-lg-1 order-sm-2">
+					<div class="row">
+						<div class="col-lg-6 col-sm-6">
 							<div class="widget">
 								<h5>Navigation</h5>
 								<ul>
-																			<li><a href="/a/en/the-clinic/">The clinic</a></li>
-																			<li><a href="/a/en/services/">Services</a></li>
-																			<li><a href="/dental-emergency/?lang=en">Dental emergency</a></li>
-																			<li><a href="/a/en/informations/">Patient info</a></li>
-																			<li><a href="/careers/?lang=en">Careers</a></li>
-																			<li><a href="/a/en/contact/">Contact</a></li>
-																		<li><a href="/a/en/take-appointment/">Book appointment</a></li>
+									<li><a href="/a/en/">Home</a></li>
+									<li><a href="/a/en/services/">Services</a></li>
+									<li><a href="/a/en/the-clinic/">The Clinic</a></li>
+									<li><a href="/a/en/informations/">Information</a></li>
+									<li><a href="/a/en/take-appointment/">Book appointment</a></li>
 								</ul>
 							</div>
 						</div>
-						<div class="col-lg-5">
+						<div class="col-lg-6 col-sm-6">
 							<div class="widget">
-								<h5>Contact</h5>
-								<p><a href="tel:18196633687">819 663-3687</a></p>
-								<p><a href="mailto:info@cdfmain.com">info@cdfmain.com</a></p>
-								<p>395, rue Main, 2e étage, Gatineau, QC J8P 5K6</p>
-								<h5 class="mt-4">Opening hours</h5>
-								<p>Monday to Thursday: 8:30 a.m. – 4:00 p.m.<br>Friday: 8:30 a.m. – 2:00 p.m.</p>
+								<h5>Our Services</h5>
+								<ul>
+									<li><a href="/a/en/services/#blanchiment">Teeth whitening</a></li>
+									<li><a href="/a/en/services/#couronnes">Crowns &amp; bridges</a></li>
+									<li><a href="/a/en/services/#facette">Veneers</a></li>
+									<li><a href="/a/en/services/#endodontie">Endodontics</a></li>
+									<li><a href="/a/en/services/#radiographie-scan-3D">3D imaging</a></li>
+								</ul>
 							</div>
 						</div>
 					</div>
 				</div>
-			</div>
-			<div class="footer-map__canvas">
-				<iframe
-					title="Clinic location"
-					src="https://maps.google.com/maps?q=Clinique%20Dentaire%20Familiale%20Main%2C%20395%20Rue%20Main%2C%20Gatineau&#038;hl=fr&#038;z=16&#038;output=embed"
-					width="100%"
-					height="100%"
-					style="border:0;"
-					allowfullscreen=""
-					loading="lazy"
-					referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+				<div class="col-lg-4 col-sm-6 order-lg-2 order-sm-1">
+					<div class="widget">
+						<h5>Contact Us</h5>
+						<div class="fw-bold text-white"><i class="icofont-location-pin me-2 id-color"></i>Clinic address</div>
+						395, rue Main, 2<sup>e</sup> étage, Gatineau, QC J8P 5K6
+
+						<div class="spacer-20"></div>
+
+						<div class="fw-bold text-white"><i class="icofont-phone me-2 id-color"></i>Call us</div>
+						<a href="tel:18196633687">(819) 663-3687</a>
+
+						<div class="spacer-20"></div>
+
+						<div class="fw-bold text-white"><i class="icofont-clock-time me-2 id-color"></i>Opening hours</div>
+						Mon – Fri · 8am – 4pm
+						<div class="spacer-20"></div>
+
+						<div class="fw-bold text-white"><i class="icofont-envelope me-2 id-color"></i>Email</div>
+						<a href="mailto:info@cdfmain.com">info@cdfmain.com</a>
+					</div>
+				</div>
 			</div>
 		</div>
 
 		<div class="subfooter">
 			<div class="container">
-				<div class="de-flex">
-					<div class="de-flex-col">
-						&copy; 2026 Clinique Dentaire Familiale Main — Gatineau, Québec
+				<div class="row">
+					<div class="col-md-12">
+						<div class="de-flex">
+							<div class="de-flex-col">
+								&copy; 2026 Clinique Dentaire Familiale Main — Gatineau, Québec
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -399,5 +399,37 @@ var e="script#wp-emoji-settings",t=document.querySelector(e);if(!(t instanceof H
 			}
 		}
 	</style>
-	<div class="static-preview-notice" role="status">Démo visuelle — les formulaires sont désactivés.</div><style>.static-preview-notice{position:fixed;right:12px;bottom:12px;z-index:99998;padding:8px 12px;border-radius:999px;background:#014337;color:#fff;font:600 11px/1.2 system-ui;box-shadow:0 8px 25px #0003}@media(max-width:600px){.static-preview-notice{display:none}}</style><script>document.addEventListener('submit',function(e){e.preventDefault();alert('Formulaire désactivé sur la démo visuelle.');});</script></body>
+				<script type="text/javascript">
+				var anr_onloadCallback = function() {
+					for ( var i = 0; i < document.forms.length; i++ ) {
+						var form = document.forms[i];
+						var captcha_div = form.querySelector( '.anr_captcha_field_div' );
+
+						if ( null === captcha_div )
+							continue;
+						captcha_div.innerHTML = '';
+						( function( form ) {
+							var anr_captcha = grecaptcha.render( captcha_div,{
+								'sitekey' : '6LcF0QcaAAAAAO7OwTiOzfn5wVxlquHHHoFwGRBl',
+								'size'  : 'normal',
+								'theme' : 'light'
+							});
+							if ( typeof jQuery !== 'undefined' ) {
+								jQuery( document.body ).on( 'checkout_error', function(){
+									grecaptcha.reset(anr_captcha);
+								});
+							}
+							if ( typeof wpcf7 !== 'undefined' ) {
+								document.addEventListener( 'wpcf7submit', function() {
+									grecaptcha.reset(anr_captcha);
+								}, false );
+							}
+						})(form);
+					}
+				};
+			</script>
+						<script src="https://www.google.com/recaptcha/api.js?onload=anr_onloadCallback&#038;render=explicit"
+				async defer>
+			</script>
+			<div class="static-preview-notice" role="status">Démo visuelle — les formulaires sont désactivés.</div><style>.static-preview-notice{position:fixed;right:12px;bottom:12px;z-index:99998;padding:8px 12px;border-radius:999px;background:#014337;color:#fff;font:600 11px/1.2 system-ui;box-shadow:0 8px 25px #0003}@media(max-width:600px){.static-preview-notice{display:none}}</style><script>document.addEventListener('submit',function(e){e.preventDefault();alert('Formulaire désactivé sur la démo visuelle.');});</script></body>
 </html>
