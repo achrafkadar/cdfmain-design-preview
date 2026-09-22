@@ -23,7 +23,10 @@ PAGES = {
         "": "",
         "services": "services",
         "la-clinique": "la-clinique",
+        "notre-equipe": "notre-equipe",
+        "urgence-dentaire": "urgence-dentaire",
         "informations": "informations",
+        "carrieres": "carrieres",
         "nous-joindre": "nous-joindre",
         "prendre-rendez-vous": "prendre-rendez-vous",
     },
@@ -139,7 +142,15 @@ def export_page(design: str, language: str, source_slug: str, output_slug: str, 
     if language == "en":
         query["lang"] = "en"
     source = f"/{source_slug + '/' if source_slug else ''}?{urllib.parse.urlencode(query)}"
-    html = local_request(source).decode("utf-8", errors="replace")
+    try:
+        html = local_request(source).decode("utf-8", errors="replace")
+    except urllib.error.HTTPError as exc:
+        if language == "en" and exc.code == 404:
+            query = {"design": design}
+            source = f"/{source_slug + '/' if source_slug else ''}?{urllib.parse.urlencode(query)}"
+            html = local_request(source).decode("utf-8", errors="replace")
+        else:
+            raise
 
     discovered = re.findall(
         r"""(?:src|href|poster)=["']([^"']+)["']|url\(["']?([^"')]+)""",
@@ -197,8 +208,17 @@ def export_page(design: str, language: str, source_slug: str, output_slug: str, 
 def main() -> None:
     """Build all French and English static preview pages."""
     if PUBLIC_DIR.exists():
-        shutil.rmtree(PUBLIC_DIR)
-    PUBLIC_DIR.mkdir(parents=True)
+        # Lexar volume sometimes races with AppleDouble (._*) files during delete.
+        for path in sorted(PUBLIC_DIR.rglob("*"), reverse=True):
+            try:
+                if path.is_file() or path.is_symlink():
+                    path.unlink()
+                elif path.is_dir():
+                    path.rmdir()
+            except OSError:
+                pass
+        shutil.rmtree(PUBLIC_DIR, ignore_errors=True)
+    PUBLIC_DIR.mkdir(parents=True, exist_ok=True)
 
     assets: set[str] = set()
     for design in ("a", "b"):
