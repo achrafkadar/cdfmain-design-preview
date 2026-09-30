@@ -187,6 +187,13 @@ def export_page(design: str, language: str, source_slug: str, output_slug: str, 
         flags=re.IGNORECASE,
     )
 
+    html = re.sub(
+        r"""<div id="cdfm-design-switcher".*?</style>\s*""",
+        "",
+        html,
+        flags=re.DOTALL,
+    )
+
     for host in INTERNAL_HOSTS:
         html = html.replace(f"http://{host}", "").replace(f"https://{host}", "")
     html = html.replace("info@dentiste-local.local", "info@cdfmain.com")
@@ -214,7 +221,7 @@ def export_page(design: str, language: str, source_slug: str, output_slug: str, 
 
 
 def main() -> None:
-    """Build all French and English static preview pages."""
+    """Build the French and English static preview pages of Version A."""
     if PUBLIC_DIR.exists():
         # Lexar volume sometimes races with AppleDouble (._*) files during delete.
         for path in sorted(PUBLIC_DIR.rglob("*"), reverse=True):
@@ -229,7 +236,7 @@ def main() -> None:
     PUBLIC_DIR.mkdir(parents=True, exist_ok=True)
 
     assets: set[str] = set()
-    for design in ("a", "b"):
+    for design in ("a",):
         for language, pages in PAGES.items():
             for source_slug, output_slug in pages.items():
                 export_page(design, language, source_slug, output_slug, assets)
@@ -237,8 +244,8 @@ def main() -> None:
     landing = """<!doctype html><html lang="fr"><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta http-equiv="refresh" content="0;url=/a/">
-<title>Clinique Dentaire Familiale Main — propositions A/B</title>
-<p><a href="/a/">Voir les propositions</a></p></html>"""
+<title>Clinique Dentaire Familiale Main</title>
+<p><a href="/a/">Voir le site</a></p></html>"""
     (PUBLIC_DIR / "index.html").write_text(landing, encoding="utf-8")
     print(f"Exported {len(assets)} assets to {PUBLIC_DIR}")
 
