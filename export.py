@@ -24,8 +24,10 @@ PAGES = {
         "services": "services",
         "la-clinique": "la-clinique",
         "notre-equipe": "notre-equipe",
+        "dr-rachid-azzouzi": "dr-rachid-azzouzi",
         "urgence-dentaire": "urgence-dentaire",
         "informations": "informations",
+        "questionnaire-medico-dentaire": "questionnaire-medico-dentaire",
         "carrieres": "carrieres",
         "nous-joindre": "nous-joindre",
         "prendre-rendez-vous": "prendre-rendez-vous",
@@ -34,7 +36,12 @@ PAGES = {
         "": "",
         "services": "services",
         "the-clinic": "the-clinic",
+        "our-team": "our-team",
+        "dr-rachid-azzouzi-dmd": "dr-rachid-azzouzi-dmd",
+        "dental-emergency": "dental-emergency",
         "informations": "informations",
+        "medical-dental-questionnaire": "medical-dental-questionnaire",
+        "careers": "careers",
         "contact": "contact",
         "take-appointment": "take-appointment",
     },
@@ -70,9 +77,10 @@ def static_page_url(url: str, current_design: str, current_language: str) -> str
     query = urllib.parse.parse_qs(parsed.query)
     design = query.get("design", [current_design])[0]
     design = "b" if design in {"b", "clair"} else "a"
-    language = query.get("lang", [current_language])[0]
-    language = "en" if language == "en" else "fr"
     path = parsed.path.strip("/")
+    default_language = "fr" if path in PAGES["fr"] and path not in PAGES["en"] else current_language
+    language = query.get("lang", [default_language])[0]
+    language = "en" if language == "en" else "fr"
 
     known_paths = set(PAGES["fr"]) | set(PAGES["en"])
     if path not in known_paths:

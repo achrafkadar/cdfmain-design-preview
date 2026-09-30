@@ -97,7 +97,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 				<div class="cdfm-topbar__inner">
 					<ul class="cdfm-topbar__info">
 						<li><i class="icofont-clock-time"></i>Mon–Thu 8:30 a.m.–4 p.m. · Fri 8:30 a.m.–2 p.m.</li>
-						<li><i class="icofont-location-pin"></i>395, rue Main, 2e étage, Gatineau, QC J8P 5K6</li>
+						<li><i class="icofont-location-pin"></i>395, rue Main, 2nd floor, Gatineau, QC J8P 5K6</li>
 					</ul>
 					<div class="cdfm-topbar__actions">
 						<a href="tel:18196633687" class="cdfm-topbar__phone"><i class="icofont-phone"></i>819 663-3687</a>
@@ -135,13 +135,13 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 										<a class="menu-item" href="/a/en/services/">Services</a>
 									</li>
 																	<li>
-										<a class="menu-item" href="/dental-emergency/?lang=en">Dental emergency</a>
+										<a class="menu-item" href="/a/en/dental-emergency/">Dental emergency</a>
 									</li>
 																	<li>
-										<a class="menu-item" href="/a/en/informations/">Patient info</a>
+										<a class="menu-item" href="/a/en/informations/">Patient area</a>
 									</li>
 																	<li>
-										<a class="menu-item" href="/careers/?lang=en">Careers</a>
+										<a class="menu-item" href="/a/en/careers/">Careers</a>
 									</li>
 																	<li>
 										<a class="menu-item" href="/a/en/contact/">Contact</a>
@@ -205,11 +205,11 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 				<a class="cdfm-btn cdfm-btn--outline-light" href="tel:18196633687"><i class="icofont-phone"></i>819 663-3687</a>
 			</div>
 			<a class="cdfm-hero__patients" href="/a/en/informations/#zone-patient">
-				<span class="cdfm-hero__patients-icon"><i class="icofont-tooth"></i></span>
-				<span>
-					<strong>New patients welcome</strong>
-					<small>Visit the patient zone <i class="icofont-arrow-right"></i></small>
+				<span class="cdfm-hero__patients-text">
+					<strong><span class="cdfm-hero__patients-dot" aria-hidden="true"></span>New patients welcome</strong>
+					<span class="cdfm-hero__patients-link">Go to the patient area</span>
 				</span>
+				<span class="cdfm-hero__patients-arrow" aria-hidden="true"><i class="icofont-arrow-right"></i></span>
 			</a>
 		</div>
 	</div>
@@ -231,8 +231,9 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 			<div class="col-lg-6">
 				<p class="cdfm-eyebrow">The clinic</p>
 				<h2 class="cdfm-title">Clinique Dentaire Familiale Main</h2>
+				<p class="cdfm-about__years"><strong>25+</strong> years of experience</p>
 				<p class="cdfm-lead">Located in the heart of Gatineau, Clinique Dentaire Familiale Main offers a complete range of personalized dental care for children, adults and seniors in a welcoming, reassuring environment.</p>
-				<p>Whether for preventive care, dental emergencies, or aesthetic and restorative treatments, our experienced team uses advanced technology to provide effective, comfortable care tailored to your needs.</p>
+				<p>Whether for preventive care, dental emergencies, or aesthetic and restorative treatments, our seasoned team uses advanced technology to provide effective, comfortable care tailored to your needs.</p>
 				<p>Our human approach, grounded in listening, respect and excellence, allows us to support you at every step toward optimal oral health. Because every smile is unique, we are committed to caring for yours, today and for years to come.</p>
 				<ul class="cdfm-checks">
 											<li><i class="icofont-check"></i>Children, adults and seniors</li>
@@ -264,6 +265,10 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 																	<li>Dental hygiene and cleaning</li>
 																	<li>Operative dentistry (fillings)</li>
 																	<li>Endodontics (root canal)</li>
+																	<li>Periodontal care (gum treatment)</li>
+																	<li>Crowns and bridges</li>
+																	<li>Occlusal splints</li>
+																	<li>Oral surgery, tooth extraction and wisdom teeth</li>
 															</ul>
 												<span class="cdfm-service__more">Learn more <i class="icofont-arrow-right"></i></span>
 					</a>
@@ -297,12 +302,12 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 					</a>
 				</div>
 											<div class="col-xl-3 col-md-6 d-flex">
-					<a class="cdfm-service" href="/dental-emergency/?lang=en">
+					<a class="cdfm-service" href="/a/en/dental-emergency/">
 						<span class="cdfm-service__icon">
 							<img src="/wp-content/themes/cdfmain-2026/assets/dentia/images/icons/tooth-4.png" alt="">
 						</span>
 						<h3>Dental emergencies</h3>
-						<p>For prompt, appropriate emergency care</p>
+						<p>For prompt and appropriate care of dental emergencies</p>
 												<span class="cdfm-service__more">Learn more <i class="icofont-arrow-right"></i></span>
 					</a>
 				</div>
@@ -331,42 +336,50 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 	</div><!-- #content -->
 
 	
-	<footer class="cdfm-footer">
+	<div class="cdfm-prefooter">
+		<div class="container">
+			<p>Let’s take care of your smile together, at every age</p>
+		</div>
+	</div>
+
+	<footer id="adresse-contacts" class="cdfm-footer">
 		<div class="cdfm-footer__grid">
 			<div class="cdfm-footer__info">
-				<p class="cdfm-footer__tagline">Let’s take care of your smile together, at every age</p>
-
 				<div class="cdfm-footer__cols">
 					<div class="cdfm-footer__brand">
-						<img src="/wp-content/themes/cdfmain-2026/assets/images/site/logo-cdfmain-color.png" class="cdfm-footer__logo" alt="Clinique Dentaire Familiale Main" width="640" height="375" loading="lazy">
-						<p class="cdfm-footer__parking"><i class="icofont-car-alt-1"></i>Free parking available</p>
+						<span class="cdfm-footer__logo-plate">
+							<img src="/wp-content/themes/cdfmain-2026/assets/images/site/logo-cdfmain-color.png" class="cdfm-footer__logo" alt="Clinique Dentaire Familiale Main" width="640" height="375" loading="lazy">
+						</span>
+						<p class="cdfm-footer__about">For more than 25 years, your trusted clinic for general and specialized dental care in Gatineau.</p>
+					</div>
+
+					<nav class="cdfm-footer__nav" aria-label="Footer navigation">
+						<ul class="cdfm-footer__links">
+															<li><a href="/a/en/the-clinic/">The clinic</a></li>
+															<li><a href="/a/en/services/">Services</a></li>
+															<li><a href="/a/en/dental-emergency/">Dental emergency</a></li>
+															<li><a href="/a/en/informations/">Patient area</a></li>
+															<li><a href="/a/en/careers/">Careers</a></li>
+															<li><a href="/a/en/contact/">Contact</a></li>
+														<li><a href="/a/en/take-appointment/">Book appointment</a></li>
+						</ul>
+					</nav>
+
+					<div class="cdfm-footer__contact">
+						<a class="cdfm-footer__phone" href="tel:18196633687">819 663-3687</a>
+						<a class="cdfm-footer__email" href="mailto:info@cdfmain.com">info@cdfmain.com</a>
+
+						<p class="cdfm-footer__address">
+							<a href="https://www.google.com/maps/search/?api=1&#038;query=Clinique%20Dentaire%20Familiale%20Main%2C%20395%20Rue%20Main%2C%20Gatineau" target="_blank" rel="noopener">395, rue Main, 2nd floor<br>Gatineau, QC J8P 5K6</a>
+						</p>
+						<p class="cdfm-footer__parking">Free parking available</p>
+
 						<div class="header-social">
 							<a href="https://www.facebook.com/cdf.main/" target="_blank" rel="noopener" aria-label="Facebook"><i class="icofont-facebook"></i></a>
 							<a href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Instagram"><i class="icofont-instagram"></i></a>
 						</div>
-					</div>
 
-					<div>
-						<h5>Navigation</h5>
-						<ul class="cdfm-footer__links">
-															<li><a href="/a/en/the-clinic/">The clinic</a></li>
-															<li><a href="/a/en/services/">Services</a></li>
-															<li><a href="/dental-emergency/?lang=en">Dental emergency</a></li>
-															<li><a href="/a/en/informations/">Patient info</a></li>
-															<li><a href="/careers/?lang=en">Careers</a></li>
-															<li><a href="/a/en/contact/">Contact</a></li>
-														<li><a href="/a/en/take-appointment/">Book appointment</a></li>
-						</ul>
-					</div>
-
-					<div>
-						<h5>Contact</h5>
-						<ul class="cdfm-footer__contact">
-							<li><i class="icofont-phone"></i><a href="tel:18196633687">819 663-3687</a></li>
-							<li><i class="icofont-email"></i><a href="mailto:info@cdfmain.com">info@cdfmain.com</a></li>
-							<li><i class="icofont-location-pin"></i><a href="https://www.google.com/maps/search/?api=1&#038;query=Clinique%20Dentaire%20Familiale%20Main%2C%20395%20Rue%20Main%2C%20Gatineau" target="_blank" rel="noopener">395, rue Main, 2e étage, Gatineau, QC J8P 5K6</a></li>
-						</ul>
-						<h5 class="mt-4">Opening hours</h5>
+						<p class="cdfm-footer__hours-title">Opening hours</p>
 						<p class="cdfm-footer__hours">Monday to Thursday: 8:30 a.m. – 4:00 p.m.<br>Friday: 8:30 a.m. – 2:00 p.m.</p>
 					</div>
 				</div>
@@ -407,7 +420,7 @@ var wpcf7 = {"api":{"root":"/wp-json/","namespace":"contact-form-7/v1"}};
 <script id="cdfm-marquee-js" src="/wp-content/themes/cdfmain-2026/assets/dentia/js/custom-marquee.js"></script>
 <script id="cdfm-custom-js" src="/wp-content/themes/cdfmain-2026/assets/js/custom.js"></script>
 <script id="wp-emoji-settings" type="application/json">
-{"baseUrl":"https://s.w.org/images/core/emoji/17.0.2/72x72/","ext":".png","svgUrl":"https://s.w.org/images/core/emoji/17.0.2/svg/","svgExt":".svg","source":{"concatemoji":"/wp-includes/js/wp-emoji-release.min.js?ver=b1257a2d668bce048d11a1aee7b58292"}}
+{"baseUrl":"https://s.w.org/images/core/emoji/17.0.2/72x72/","ext":".png","svgUrl":"https://s.w.org/images/core/emoji/17.0.2/svg/","svgExt":".svg","source":{"concatemoji":"/wp-includes/js/wp-emoji-release.min.js?ver=deec1061e400f777c4b5378189448ca9"}}
 </script>
 <script type="module">
 /*! This file is auto-generated */
