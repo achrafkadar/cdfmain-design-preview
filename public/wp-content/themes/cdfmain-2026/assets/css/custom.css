@@ -19,8 +19,10 @@
 /* Dentia style.css: .d-flex { white-space: nowrap } — breaks wrapped text in grid columns */
 .contact-layout > [class*="col-"].d-flex,
 .appointment-layout > [class*="col-"].d-flex,
-.services-grid > [class*="col-"].d-flex {
+.services-grid > [class*="col-"].d-flex,
+.cdfm-section [class*="col-"].d-flex {
 	white-space: normal !important;
+	min-width: 0;
 }
 
 /* ── Logo (exactly one visible at a time) ── */
@@ -2307,7 +2309,9 @@ html body { overflow-x: clip; }
 .cdfm-mv-card,
 .cdfm-values {
 	width: 100%;
+	min-width: 0;
 	padding: 40px;
+	overflow: hidden;
 	border: 1px solid var(--cdfm-line);
 	border-radius: 24px;
 	background: #fff;
@@ -2323,6 +2327,8 @@ html body { overflow-x: clip; }
 	margin: 0;
 	color: var(--cdfm-text);
 	line-height: 1.8;
+	white-space: normal;
+	overflow-wrap: break-word;
 }
 .cdfm-mv-card__icon {
 	display: grid;
