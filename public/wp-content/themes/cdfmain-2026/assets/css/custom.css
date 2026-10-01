@@ -17,12 +17,13 @@
 }
 
 /* Dentia style.css: .d-flex { white-space: nowrap } — breaks wrapped text in grid columns */
+.row > [class*="col-"].d-flex,
 .contact-layout > [class*="col-"].d-flex,
 .appointment-layout > [class*="col-"].d-flex,
-.services-grid > [class*="col-"].d-flex,
-.cdfm-section [class*="col-"].d-flex {
+.services-grid > [class*="col-"].d-flex {
 	white-space: normal !important;
 	min-width: 0;
+	flex-wrap: wrap;
 }
 
 /* ── Logo (exactly one visible at a time) ── */
@@ -1980,7 +1981,11 @@ footer.cdfm-footer {
 	transition: color .2s;
 }
 .cdfm-footer a:hover { color: #7fd6e3 !important; }
-.cdfm-footer__nav { height: auto !important; }
+.cdfm-footer__nav,
+.cdfm-page-nav {
+	height: auto !important;
+	overflow: visible;
+}
 .cdfm-footer__links {
 	display: grid;
 	gap: 14px;
@@ -2224,16 +2229,21 @@ footer.cdfm-footer {
 html { scroll-padding-top: 170px; }
 html body { overflow-x: clip; }
 .cdfm-page-nav {
+	position: relative;
+	z-index: 2;
+	height: auto !important;
+	overflow: visible;
 	border-bottom: 1px solid var(--cdfm-line);
 	background: #fff;
 }
 .cdfm-page-nav ul {
 	display: flex;
+	flex-wrap: wrap;
 	justify-content: center;
 	gap: 10px;
 	margin: 0;
 	padding: 16px 0;
-	overflow-x: auto;
+	overflow: visible;
 	list-style: none;
 }
 .cdfm-page-nav a {
@@ -2310,11 +2320,13 @@ html body { overflow-x: clip; }
 .cdfm-values {
 	width: 100%;
 	min-width: 0;
+	height: auto;
 	padding: 40px;
-	overflow: hidden;
+	overflow: visible;
 	border: 1px solid var(--cdfm-line);
 	border-radius: 24px;
 	background: #fff;
+	white-space: normal !important;
 }
 .cdfm-mv-card h3,
 .cdfm-values h3 {
@@ -2327,7 +2339,7 @@ html body { overflow-x: clip; }
 	margin: 0;
 	color: var(--cdfm-text);
 	line-height: 1.8;
-	white-space: normal;
+	white-space: normal !important;
 	overflow-wrap: break-word;
 }
 .cdfm-mv-card__icon {
@@ -3454,7 +3466,13 @@ html body { overflow-x: clip; }
 		gap: 8px;
 		overflow: visible;
 	}
-	.cdfm-page-nav a { padding: 8px 14px; font-size: 13.5px; }
+	.cdfm-page-nav a {
+		padding: 8px 14px;
+		font-size: 13.5px;
+		white-space: normal;
+		line-height: 1.35;
+		text-align: center;
+	}
 	.cdfm-quest__row > span:first-child { min-width: 0; }
 	.cdfm-quest__inline { display: flex; margin: 8px 0 0; }
 	.cdfm-appt-form input.cdfm-quest__mini,
