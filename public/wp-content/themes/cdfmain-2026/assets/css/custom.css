@@ -2093,7 +2093,26 @@ footer.cdfm-footer {
 .cdfm-appt-form__grid {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
-	gap: 0 14px;
+	gap: 16px 20px;
+	align-items: stretch;
+}
+.cdfm-appt-form__grid > p {
+	display: flex;
+	margin: 0;
+	min-width: 0;
+}
+.cdfm-appt-form__grid > p > label {
+	display: flex;
+	flex-direction: column;
+	flex: 1;
+	min-width: 0;
+	height: 100%;
+	margin-bottom: 0;
+}
+.cdfm-appt-form__grid > p > label input,
+.cdfm-appt-form__grid > p > label select {
+	margin-top: auto;
+	min-height: 44px;
 }
 .cdfm-appt-form label {
 	display: block;
