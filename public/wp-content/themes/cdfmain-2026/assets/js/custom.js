@@ -116,11 +116,30 @@
 		});
 	}
 
+	function initNewPatientSource() {
+		var forms = document.querySelectorAll('.cdfm-appt-form');
+		for (var i = 0; i < forms.length; i++) {
+			(function (form) {
+				var source = form.querySelector('[data-show-if-new]');
+				if (!source) {
+					return;
+				}
+				form.addEventListener('change', function (e) {
+					if (e.target.name !== 'already_patient') {
+						return;
+					}
+					source.hidden = e.target.value !== 'non';
+				});
+			})(forms[i]);
+		}
+	}
+
 	function onReady() {
 		hidePreloader();
 		revealWow();
 		initFaqAccordion();
 		initMobileMenu();
+		initNewPatientSource();
 	}
 
 	if (document.readyState === 'loading') {
